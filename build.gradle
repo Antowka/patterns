@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+ 
+// JDK 8
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileJava.options.encoding = 'UTF-8'
+ 
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+ 
+dependencies {
+    testCompile 'org.mockito:mockito-core:1.+'
+    testCompile "org.powermock:powermock-module-junit4:1.6.4"
+    testCompile 'junit:junit:4.12'
+}
